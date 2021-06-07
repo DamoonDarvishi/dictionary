@@ -1,13 +1,20 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import LanguageContext from "../contexts/LanguageContext";
 
 const Field = () => {
+  const [word, setWord] = useState('')
   const context = useContext(LanguageContext);
-  const labelName = context === "United State" ? "Name" : "Vorname";
+  console.log(context, ";k");
+
+  const handleChange = (event) => {
+    setWord(event.target.value);
+  }
+
+  const labelName = context === "en_US" ? "Name" : "Vorname";
   return (
     <div className="ui form">
       <label>{labelName}: </label>
-      <input />
+      <input value={word} onChange={(event) => handleChange(event)} />
     </div>
   );
 };

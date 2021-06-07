@@ -1,10 +1,9 @@
-import { useEffect } from "react";
 import LanguageContext from "../contexts/LanguageContext";
 import ColorContext from "../contexts/ColorContext";
 
 const Button = () => {
   const renderSubmit = (value) => {
-    return value === "United State" ? "Submit" : "Vorlegen";
+    return value === "en_US" ? "Submit" : "Vorlegen";
   };
 
 
