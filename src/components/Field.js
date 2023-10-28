@@ -13,7 +13,7 @@ const Field = () => {
   const labelName = context === "en_US" ? "Name" : "Vorname";
   return (
     <div className="ui form">
-      <label>{labelName}: </label>
+      <label>{labelName}: Input</label>
       <input value={word} onChange={(event) => handleChange(event)} />
     </div>
   );
